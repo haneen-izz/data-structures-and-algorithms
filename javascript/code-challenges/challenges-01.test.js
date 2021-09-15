@@ -140,6 +140,7 @@ const createList = (availableItems) => {
   return list;
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
 
@@ -254,3 +255,5 @@ xdescribe('Testing challenge 7', () => {
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
 });
+
+
