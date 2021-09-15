@@ -103,14 +103,17 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-
- 
+  for(let i= 0 ; i<times ; i++){
+   callback(arr , num);
 };
+return arr;
+}
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -130,7 +133,8 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-const createList = (availableItems) => {
+
+const createList = (_availableItems) => {
   // Solution code here...
 };
 
@@ -148,7 +152,7 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
+const fizzbuzz = () => {
   // Solution code here...
 };
 
@@ -210,4 +214,6 @@ xdescribe('Testing challenge 7', () => {
     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
+
 });
+
