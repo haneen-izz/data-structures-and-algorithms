@@ -17,6 +17,7 @@ function upper(str) {
   return str.toUpperCase();
 }
 
+
 function lower(str) {
   return str.toLowerCase();
 }
@@ -60,6 +61,7 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 const sortBackwards = (arr) => {
   // Solution code here...
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
