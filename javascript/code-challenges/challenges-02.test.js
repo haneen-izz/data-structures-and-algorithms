@@ -202,7 +202,6 @@ const snorlaxStats = {
   name: 'snorlax',
   weight: 4600,
 };
-
 const extractStats = (arr) => {
   // Solution code here...
 };
