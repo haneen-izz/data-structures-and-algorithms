@@ -175,6 +175,7 @@ const sortPeopleBetter = (arr) => {
   // Solution code here...
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 12 - Stretch Goal
 
