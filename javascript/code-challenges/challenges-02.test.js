@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ const raisedToTheThird = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
@@ -36,7 +36,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-  let arrayOfString = arr.map((string) => string + "?");
+  let arrayOfString = arr.map((string) => string + '?');
   return arrayOfString;
 };
 
@@ -70,7 +70,6 @@ const forEachTwoToThe = (arr) => {
   // Solution code here...
   let arrayOfIntegers = [];
   arr.forEach((value) => arrayOfIntegers.push(Math.pow(2, value)));
-
   return arrayOfIntegers;
 };
 
@@ -203,7 +202,6 @@ const snorlaxStats = {
   name: 'snorlax',
   weight: 4600,
 };
-
 const extractStats = (arr) => {
   // Solution code here...
 };
@@ -264,7 +262,6 @@ describe('Testing challenge 5', () => {
     expect(forEachTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);
   });
 });
-
 describe('Testing challenge 6', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
