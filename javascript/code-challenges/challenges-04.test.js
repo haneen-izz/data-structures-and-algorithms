@@ -23,11 +23,11 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
-  let array = [];
+  let arrayAni = [];
   arr.forEach(function (item) {
-    array.push(callback(item));
+    arrayAni.push(callback(item));
   });
-  return array;
+  return arrayAni;
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
