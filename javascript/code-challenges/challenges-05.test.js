@@ -13,6 +13,10 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = (people) => {
   // Solution code here...
+  let arr = people.map((str) => {
+    return str.firstName + " " + str.lastName;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,6 +28,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,6 +45,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  let total = arr.reduce((a, b) => +(a + b.purchasePrice), 0);
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +59,9 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce((num) => {
+    return num + 1;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,6 +125,11 @@ let starWarsData = [
 
 const returnNames = (arr) => {
   // Solution code here...
+  let answer = arr.reduce((a, b) => {
+    a.push(b.name);
+    return a;
+  }, []);
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,6 +142,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  return str.split("").reduce((rev, char) => char + rev, "");
 };
 
 /* ------------------------------------------------------------------------------------------------
