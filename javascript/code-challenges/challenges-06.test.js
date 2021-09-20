@@ -101,6 +101,7 @@ const setStatusAsAuthor = (people) => {
   // Solution code here...
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
