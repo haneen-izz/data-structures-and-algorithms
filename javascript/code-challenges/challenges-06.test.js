@@ -31,7 +31,6 @@ const getNames = (arr) => {
   });
   return array;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -42,7 +41,6 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 const appendTheEnd = (str) => {
   // Solution code here...
   return `${str} The end.`;
-
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
