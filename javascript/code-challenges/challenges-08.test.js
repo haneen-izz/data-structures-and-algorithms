@@ -1,61 +1,77 @@
-"use strict";
+'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 1 - Review
 
 Use the characters data below for all of the challenges except challenge 2 and 3.
+
 Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [
   {
-    name: "Eddard",
-    spouse: "Catelyn",
-    children: ["Robb", "Sansa", "Arya", "Bran", "Rickon"],
-    house: "Stark",
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark',
   },
   {
-    name: "Jon A.",
-    spouse: "Lysa",
-    children: ["Robin"],
-    house: "Arryn",
+    name: 'Jon A.',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn',
   },
   {
-    name: "Cersei",
-    spouse: "Robert",
-    children: ["Joffrey", "Myrcella", "Tommen"],
-    house: "Lannister",
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister',
   },
   {
-    name: "Daenarys",
-    spouse: "Khal Drogo",
-    children: ["Drogon", "Rhaegal", "Viserion"],
-    house: "Targaryen",
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen',
   },
   {
-    name: "Mace",
-    spouse: "Alerie",
-    children: ["Margaery", "Loras"],
-    house: "Tyrell",
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell',
   },
   {
-    name: "Euron",
+    name: 'Euron',
     spouse: null,
     children: [],
-    house: "Greyjoy",
+    house: 'Greyjoy',
   },
   {
-    name: "Jon S.",
+    name: 'Jon S.',
     spouse: null,
     children: [],
-    house: "Snow",
+    house: 'Snow',
   },
 ];
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  charArray.sort((firstEl, secEl) => {
+    if (firstEl.children.length > secEl.children.length) {
+      return 1;
+    } else if (firstEl.children.length < secEl.children.length) {
+      return -1;
+    } else {
+      if (firstEl.name > secEl.name) {
+        return 1;
+      } else if (firstEl.name < secEl.name) {
+        return -1;
+      } else return 0;
+    }
+  });
+  return charArray;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -65,6 +81,8 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
+  let value = new RegExp('w');
+  return value.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,6 +99,7 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  return /[0-9]/.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +111,8 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
+  let lowerCase = /world/;
+  return lowerCase.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,6 +125,7 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  return str.match(/[A-Z][a-z]*/g) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,6 +136,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let Array = arr.filter((city) => /^[A-J]/.test(city));
+  return Array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,9 +161,9 @@ CHALLENGE 8 - Stretch Goal
 
 Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
 
-For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
+For example, if given the string 'Hello, and have a wonderful day!', the word 'Hello, ' would not be returned because it is immediately followed by a comma. The word 'day!' would not be returned because it is immediately followed by an exclamation point.
 
-The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
+The expected output of 'Hello, and have a wonderful day!' is ['and ', 'have ', 'a ', 'wonderful '].
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = (str) => {
@@ -165,15 +189,14 @@ let hangman = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
 
-Write a function named findShells that takes in the string below and uses a regular expression pattern to find all instances of the following words: "sells", "shells", "seashells".
+Write a function named findShells that takes in the string below and uses a regular expression pattern to find all instances of the following words: 'sells', 'shells', 'seashells'.
 
 Do not use the vertical bar (pipe) character.
 
-Hint: All of these words end with the letters "ells".
+Hint: All of these words end with the letters 'ells'.
 ------------------------------------------------------------------------------------------------ */
 
-const seashells =
-  "She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I'm sure she sells seashore shells.";
+const seashells = `She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I'm sure she sells seashore shells.`;
 
 const findShells = (str) => {
   // Solution code here...
