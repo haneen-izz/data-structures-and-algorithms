@@ -59,14 +59,11 @@ const sortByChildren = (charArray) => {
   charArray.sort((firstEl, secEl) => {
     if (firstEl.children.length > secEl.children.length) {
       return 1;
-    } else if (firstEl.children.length < secEl.children.length) {
-      return -1;
     } else {
       if (firstEl.name > secEl.name) {
         return 1;
-      } else if (firstEl.name < secEl.name) {
-        return -1;
-      } else return 0;
+  
+      } 
     }
   });
   return charArray;
@@ -156,6 +153,7 @@ Do not use the vertical bar (pipe) in your pattern.
 const matchMonth = (input) => {
   // Solution code here...
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
