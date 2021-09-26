@@ -140,6 +140,7 @@ const citiesAtoJ = (arr) => {
   return Array;
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
@@ -213,22 +214,22 @@ Run your tests from the console: jest challenges-04.solution.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe("Testing challenge 1", () => {
-  test("It should sort the characters by number of children", () => {
-    expect(sortByChildren(characters)[0].name).toStrictEqual("Euron");
+describe('Testing challenge 1', () => {
+  test('It should sort the characters by number of children', () => {
+    expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
 });
 
-describe("Testing challenge 2", () => {
-  test("It should return true if the input contains a lower case w", () => {
-    expect(containsW("hello world")).toBe(true);
+describe('Testing challenge 2', () => {
+  test('It should return true if the input contains a lower case w', () => {
+    expect(containsW('hello world')).toBe(true);
   });
-  test("It should return false if the input contains an upper case W", () => {
-    expect(containsW("Hello World")).toBe(false);
+  test('It should return false if the input contains an upper case W', () => {
+    expect(containsW('Hello World')).toBe(false);
   });
-  test("It should return false if the input does not contain a w", () => {
-    expect(containsW("hello everyone")).toBe(false);
+  test('It should return false if the input does not contain a w', () => {
+    expect(containsW('hello everyone')).toBe(false);
   });
 });
 
