@@ -206,6 +206,7 @@ const calculateProduct = (numbers) => {
   // Solution code here...
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
